@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "PLuMS main window: core only; storage and file dialogs go through reviewed app commands.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}

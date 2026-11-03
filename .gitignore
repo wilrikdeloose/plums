@@ -1,0 +1,102 @@
+# Dependencies
+node_modules/
+
+# Builds / caches
+dist/
+dist-ssr/
+.vite/
+*.tsbuildinfo
+.turbo/
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# Tests / coverage
+coverage/
+.vitest-cache/
+*.lcov
+playwright-report/
+test-results/
+blob-report/
+
+# Logs / debug
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+token.txt
+credentials.json
+secrets.json
+*.secrets.json
+
+# Local app data (desktop your.data + quarantined copies)
+your.data
+your.data.*
+*.data.bak
+*.data.corrupt
+*.data.quarantine*
+
+# Rust / Tauri
+src-tauri/target/
+src-tauri/gen/
+src-tauri/WixTools/
+*.pdb
+
+# Editors / IDEs
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Optional package managers / tooling
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnpm-store/
+.npm/
+
+# Misc local / temp
+tmp/
+temp/
+*.tmp
+*.temp
+*.local
+.history/
+.direnv/
+.vercel/
+.netlify/
+}

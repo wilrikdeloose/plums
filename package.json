@@ -1,0 +1,35 @@
+{
+  "name": "plums",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev:web": "vite --mode web",
+    "dev:desktop": "node scripts/desktop.mjs dev",
+    "vite:desktop": "vite --mode desktop",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run --mode web",
+    "build:web": "npm run typecheck && vite build --mode web",
+    "build:desktop-frontend": "npm run typecheck && vite build --mode desktop",
+    "build:desktop": "node scripts/desktop.mjs build",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@tauri-apps/api": "^2.12.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4"
+  }
+}

@@ -1,0 +1,34 @@
+[package]
+name = "plums"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[features]
+# Enabled only by `scripts/desktop.mjs --testmode=true`; never part of the defaults.
+canvas-test-mode = []
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+reqwest = { version = "0.13", default-features = false, features = ["native-tls", "http2", "charset", "system-proxy", "stream"] }
+futures-util = { version = "0.3", default-features = false, features = ["std"] }
+keyring-core = "1"
+rmcp = { version = "3.5.1", features = ["client", "server", "macros", "schemars", "transport-async-rw", "transport-streamable-http-client-reqwest", "reqwest-native-tls"] }
+tokio = { version = "1", features = ["io-util", "sync", "time", "macros", "rt"] }
+serde_json = "1"
+schemars = "1"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows-native-keyring-store = "1"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+apple-native-keyring-store = { version = "1", features = ["keychain"] }
+
+[profile.release]
+strip = true
+lto = true
